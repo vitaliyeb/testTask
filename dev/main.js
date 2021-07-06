@@ -1,3 +1,6 @@
+import './fileLoaders/images';
+import './fileLoaders/sounds';
+
 import Game from "./game";
 
 window.addEventListener('load', () => {

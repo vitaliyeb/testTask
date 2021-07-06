@@ -30,6 +30,14 @@ module.exports = {
                     name: '[name].[ext]',
                     outputPath: 'images',
                 }
+            },
+            {
+                test: /\.(mp3)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'sounds',
+                }
             }
         ],
     },

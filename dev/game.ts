@@ -1,3 +1,5 @@
+import Menu from "./states/menu";
+import Sound from "./helpers/sound";
 
 
 class Game {
@@ -5,10 +7,15 @@ class Game {
     appHeight: number;
     backgroundCanvas: HTMLCanvasElement;
     screenCanvas: HTMLCanvasElement;
+    menu: Menu;
+    sound: Sound;
 
     constructor(backgroundCanvas: HTMLCanvasElement, screenCanvas: HTMLCanvasElement) {
         this.backgroundCanvas = backgroundCanvas;
         this.screenCanvas = screenCanvas;
+
+        this.menu = new Menu(this);
+        this.sound = new Sound(this);
     }
 
     setSize = () => {
@@ -20,6 +27,16 @@ class Game {
 
     init = () => {
         this.setSize();
+        this.setState('menu');
+    }
+
+    setState = (state: string) => {
+        switch (state) {
+            case 'menu':
+                return this.menu.init();
+            default:
+                return '';
+        }
     }
 
 
