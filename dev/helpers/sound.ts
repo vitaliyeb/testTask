@@ -21,6 +21,7 @@ export default class Sound{
         }
 
         audio.play();
+        console.log('test')
 
         this.soundList.push({
             id,
