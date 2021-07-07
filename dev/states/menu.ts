@@ -9,7 +9,8 @@ export default class Menu {
 
     init = () => {
         this.game.sound.addSound('intro.mp3', {
-            volume: .5
+            volume: 1,
+            loop: true
         });
     }
 }

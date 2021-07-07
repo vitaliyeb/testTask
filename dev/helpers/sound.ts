@@ -12,16 +12,15 @@ export default class Sound{
         this.soundList = [];
     }
 
-    addSound = (soundName: string, option) => {
+    addSound = (soundName: string, option): string => {
         const audio = new Audio(`sounds/${soundName}`);
-        const id = '';
+        const id = [Math.random(),Math.random(),Math.random()].map((n) => String(n).slice(-4)).join('');
 
-        for (let [key, value] of Object.entries(option)) {
-            audio[key] = value;
+        for (let key of Object.keys(option)) {
+            audio[key] = option[key];
         }
 
         audio.play();
-        console.log('test')
 
         this.soundList.push({
             id,
