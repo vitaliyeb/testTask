@@ -1,5 +1,6 @@
 import Menu from "./states/menu";
 import Sound from "./helpers/sound";
+import ImageStore from "./helpers/imageStore";
 
 
 class Game {
@@ -7,15 +8,22 @@ class Game {
     appHeight: number;
     backgroundCanvas: HTMLCanvasElement;
     screenCanvas: HTMLCanvasElement;
+    bgContext: CanvasRenderingContext2D;
+    screenContext: CanvasRenderingContext2D;
     menu: Menu;
     sound: Sound;
+    imageStore: ImageStore;
 
     constructor(backgroundCanvas: HTMLCanvasElement, screenCanvas: HTMLCanvasElement) {
         this.backgroundCanvas = backgroundCanvas;
         this.screenCanvas = screenCanvas;
+        this.bgContext = backgroundCanvas.getContext('2d');
+        this.screenContext = screenCanvas.getContext('2d');
+
 
         this.menu = new Menu(this);
         this.sound = new Sound(this);
+        this.imageStore = new ImageStore(this);
     }
 
     setSize = () => {

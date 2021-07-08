@@ -8,9 +8,10 @@ export default class Menu {
     }
 
     init = () => {
-        this.game.sound.addSound('intro.mp3', {
-            volume: 1,
-            loop: true
-        });
+        // this.game.sound.addSound('intro.mp3', {
+        //     volume: 1,
+        //     loop: true
+        // });
+        this.game.imageStore.setBackground('menu:bg');
     }
 }
