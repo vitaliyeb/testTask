@@ -35,6 +35,7 @@ class Game {
 
     init = () => {
         this.setSize();
+        this.imageStore.loadImages();
         this.setState('menu');
     }
 

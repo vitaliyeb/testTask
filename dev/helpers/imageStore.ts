@@ -13,8 +13,21 @@ export default class ImageStore {
         this.store = {};
     }
 
-    imageLoader = () => {
+    loadImages = () => {
+        const promises = [];
 
+        [
+            { name: 'menu:bg', ext: '.jpg'}
+        ].forEach(({ name, ext }) => {
+            const image = new Image();
+            promises.push(new Promise((resolve) => {
+                image.addEventListener('load', resolve);
+            }))
+            image.src = `/images/${name + ext}`;
+            this.store[name] = image;
+        })
+
+        console.log(Promise.all(promises));
     }
 
     setBackground = (imageId: string) => {
