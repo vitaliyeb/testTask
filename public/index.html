@@ -6,29 +6,94 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            overflow: hidden;
-            justify-content: center;
-            align-items: center;
-        }
-        #app{
-            width: 1400px;
-            height: 810px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <canvas id="background"></canvas>
-        <canvas id="screen"></canvas>
-    </div>
+    <main>
+        <div class="profile">
+            <img class="profile__logo" src="./images/avatar.jpeg" alt="">
+            <div class="profile__edit">
+                <div class="profile__field-wrapper">
+                    <input type="text" class="profile__field">
+                    <label for="" class="profile__field-label">ИМЯ</label>
+                </div>
+                <div class="profile__field-wrapper">
+                    <input type="text" class="profile__field">
+                    <label for="" class="profile__field-label">ДАТА РОЖДЕНИЯ</label>
+                </div>
+                <div class="profile__field-wrapper">
+                    <input type="text" class="profile__field">
+                    <label for="" class="profile__field-label">ГОРОД</label>
+                </div>
+                <div class="profile__field-wrapper">
+                    <input type="text" class="profile__field">
+                    <label for="" class="profile__field-label">КОНТАКТНЫЕ ДАННЫЕ</label>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="skills__heading">Навыки</h3>
+            <div class="skills__enumeration">
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">HTML5</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="10"></div>
+                    <span class="skills__checkbox-label">SASS</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="20"></div>
+                    <span class="skills__checkbox-label">VANILLAJS</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">GIT</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">CSS3</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">LESS</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="15"></div>
+                    <span class="skills__checkbox-label">ANGULAR</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">FOUNDATION</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">БЭМ</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">GULP</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="15"></div>
+                    <span class="skills__checkbox-label">JQUERY</span>
+                </div>
+                <div class="skills__checkbox-wrapper">
+                    <div class="skills__checkbox" data-progress="5"></div>
+                    <span class="skills__checkbox-label">BOOTSTRAP</span>
+                </div>
+            </div>
+        </div>
+        <div class="level">
+            <div class="level__graph-wrapper">
+                <img class="level__graph" src="./images/skill.png" alt="">
+                <img class="level__arrow" src="./images/arrow.png" alt="">
+            </div>
+            <div class="level__info">
+                <p>Мой уровень владения <br> Java Script</p>
+                <span class="level__info-score">0</span>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

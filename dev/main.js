@@ -1,12 +1,5 @@
-import './fileLoaders/images';
-import './fileLoaders/sounds';
-
-import Game from "./game";
-
-window.addEventListener('load', () => {
-   const screenCanvas = document.getElementById('screen');
-   const backgroundCanvas = document.getElementById('background');
-   const game = new Game(backgroundCanvas, screenCanvas);
-
-   game.init();
-});
+import './../public/images/avatar.jpeg'
+import './../public/images/skill.png'
+import './../public/images/arrow.png'
+import './styles/style.styl'
+import './scripts/script'

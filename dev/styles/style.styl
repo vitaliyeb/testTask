@@ -1,0 +1,99 @@
+*
+    margin 0
+    padding 0
+    font-size 12px
+    font-weight 400
+
+body
+    background-color #f0f0f0
+
+main
+    background-color #fff
+    padding 60px 0 100px
+    background-clip content-box
+    max-width 660px
+    width 100%
+    margin 0 auto
+
+.profile
+    padding 20px 20px 32px
+    display flex
+    gap 20px
+    border-bottom 1px solid #f0f0f0
+    &__logo
+        border-radius 50% 
+        width 140px
+        object-fit cover
+        height 140px
+    &__edit
+        display grid
+        flex-grow 1 
+        row-gap 15px
+    &__field
+        outline none
+        border none
+        padding 16px 0 8px
+        width 100%
+        &-wrapper
+            border-bottom 2px solid #000
+            position relative
+        &-label
+            position absolute
+            left 0
+            bottom 8px
+            text-transform uppercase
+            letter-spacing 1.2px
+            color #bababa
+
+.skills
+    padding: 34px 20px;
+    border-bottom 1px solid #f0f0f0
+    &__heading
+        font-size 18px
+        margin-bottom 20px
+    &__enumeration
+        display grid
+        row-gap 37px
+        grid-template-columns repeat(4, 1fr)
+    &__checkbox
+        width 19px
+        height 19px
+        background-color #eeeeee  
+        border-radius 5px
+        cursor pointer
+        &:hover
+            background-color #cccccc
+        &-label
+            color #bababa 
+        &-wrapper
+            display flex
+            align-items center
+            gap 8px    
+        &_active
+            background-color red
+
+.level
+    padding 59px 18px 60px 23px
+    display flex
+    column-gap 50px
+    &__graph
+        width 250px
+        height 126px
+        &-wrapper
+            position relative    
+            display inline-block
+    &__arrow
+        --arrow-rotate 1deg
+        position absolute
+        top 100%
+        left 50%
+        transform: translate(-50%,-53%) rotate(calc(-34deg + var(--arrow-rotate)))     
+    &__info
+        & p 
+            font-size: 18px;
+            color: #010101;   
+            margin 10px 0
+        & span 
+            font-size 50px
+            font-weight 700 
+            color #ffc815    

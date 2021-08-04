@@ -1,1 +1,0 @@
-import './../../public/images/menu:bg.jpg'
